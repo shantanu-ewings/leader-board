@@ -1,0 +1,24 @@
+{
+  "people": [
+    {
+      "name": "Sachin Hore",
+      "score": 4,
+      "image-name": "sachin.webp"
+    },
+    {
+      "name": "Shantanu Pawar",
+      "score": 2,
+      "image-name": "shawn.webp"
+    },
+    {
+      "name": "Pratidnya Kanse",
+      "score": 3,
+      "image-name": "prat.webp"
+    },
+    {
+      "name": "Sayed Rizvi",
+      "score": 0,
+      "image-name": "sayed.webp"
+    }
+  ]
+}
