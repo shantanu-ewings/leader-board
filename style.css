@@ -18,6 +18,10 @@ main {
   height: 100vh;
 }
 
+.leader-board{
+  width: auto;
+}
+
 .leader-board {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
