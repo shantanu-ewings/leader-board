@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://www.radxhosting.co.za/images/2252.jpg);
+  background-size: cover;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.leader-board {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-size: x-large;
+  width: 80%;
+  counter-reset: ranking;
+  
+  header {
+    text-align: center;
+  }
+  
+  ul {
+    position: relative;
+    list-style: none;
+    margin: 1em;
+    padding: 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+
+    &:before {
+      content:'';
+      border-left: 2px solid rgba(255,255,255, 0.5);
+      position: absolute;
+      top: 1em;
+      bottom: 1em;
+    }
+  }
+  
+  li {
+    display: flex;
+    flex-basis: 40%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;     
+    
+    &::before {
+      counter-increment: ranking;
+      content: counters(ranking, ".", decimal-leading-zero);
+    }
+    
+    img {
+      height: 3em;
+      width: 3em;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    
+    .name {
+      margin-right: auto;
+      text-transform: capitalize;
+    }
+    
+    .score {
+      font-weight: bold;
+    }
+  }
+}
