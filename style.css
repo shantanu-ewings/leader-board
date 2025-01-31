@@ -18,16 +18,13 @@ main {
   height: 100vh;
 }
 
-.leader-board{
-  width: auto;
-}
-
 .leader-board {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   font-size: x-large;
   width: 80%;
   counter-reset: ranking;
+  width: auto;
   
   header {
     text-align: center;
