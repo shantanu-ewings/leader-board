@@ -15,6 +15,8 @@ const list = document.querySelector('.list');
 fetch('data2.json')
   .then(response => response.json())
   .then(data => {
+    data.people.sort((a, b) => b.score - a.score);
+
     data.people.forEach(person => {
       console.log('Name:', person.name);
       console.log('Score:', person.score);
