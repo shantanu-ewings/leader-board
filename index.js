@@ -5,10 +5,26 @@ const list = document.querySelector('.list');
 //   .then(data => updateLeaderBoard(data.results));
 
 
-fetch('data.json')  // Update the path to point to your local data.json file
+// fetch('data.json')  // Update the path to point to your local data.json file
+//   .then(response => response.json())
+//   .then(data => updateLeaderBoard(data.results))
+//   .catch(error => console.error('Error fetching data:', error));
+
+
+// Assuming the JSON file is named 'data.json'
+fetch('data2.json')
   .then(response => response.json())
-  .then(data => updateLeaderBoard(data.results))
-  .catch(error => console.error('Error fetching data:', error));
+  .then(data => {
+    data.people.forEach(person => {
+      console.log('Name:', person.name);
+      console.log('Score:', person.score);
+      console.log('Image Name:', person['image-name']);
+      insertPerson(person.name, person['image-name'], person.score);
+    });
+  })
+  .catch(error => {
+    console.error('Error reading JSON file:', error);
+  });
 
 function updateLeaderBoard(persons) {
   persons.forEach((person, index) => {
