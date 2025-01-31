@@ -1,8 +1,14 @@
 const list = document.querySelector('.list');
 
-fetch('https://randomuser.me/api/?results=10&nat=us')
+// fetch('https://randomuser.me/api/?results=10&nat=us')
+//   .then(response => response.json())
+//   .then(data => updateLeaderBoard(data.results));
+
+
+fetch('data.json')  // Update the path to point to your local data.json file
   .then(response => response.json())
-  .then(data => updateLeaderBoard(data.results));
+  .then(data => updateLeaderBoard(data.results))
+  .catch(error => console.error('Error fetching data:', error));
 
 function updateLeaderBoard(persons) {
   persons.forEach((person, index) => {
